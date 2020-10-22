@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Stylesheet -->
+
+    <script src="https://kit.fontawesome.com/c30c78c37c.js" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap CDN -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Local Stylesheet -->
+
+    <link rel="stylesheet" href="style.css">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div class="container todo-list" id="todo">
+        <button class="float-right clr-button clear btn-sm btn btn-dark"><i class="fas fa-trash"></i> Clear</button>
+        <header class="text-center my-5">
+            <h1 class="heading mb-0">Todo List</h1>
+            <div class="under-line bg-info"></div>
+        </header>
+        <section>
+        <form id="addForm" autocomplete="off">
+            <div class="input-group my-4">
+                <input type="text" class="form-control" placeholder="Add an item.." id="item" required>
+                <div class="input-group-append text-center">
+                    <button class="btn btn-info" type="submit"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section>
+        <div class="items-list">
+            <p class="nothing">*Nothing Yet*</p>
+            <ul id="items" class="list-group">
+            </ul>
+        </div>
+    </section>
+    </div>
+
+    <!-- Modal -->
+    <div class="confirm-box text-center py-4 border">
+        <h3>Are you sure to clear all items ?</h3>
+        <p>This will remove all of your items <span class="text-primary">(Be careful !)</span></p>
+        <button type="button" class="btn btn-sm btn-outline-success rounded-0 confirm-btn">No, keep them</button>
+        <button type="button" class="btn btn-sm btn-outline-danger rounded-0 confirm-btn yes">Yes, remove all</button>
+    </div>
+    <!-- Script File -->
+    <script src="app.js"></script>
+</body>
+
+</html>
